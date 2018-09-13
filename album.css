@@ -1,5 +1,5 @@
 :root {
-  --jumbotron-padding-y: 6.5rem;
+  --jumbotron-padding-y: 10vh;
 }
 
 .jumbotron {
@@ -19,7 +19,7 @@
 }
 @media (min-width: 768px) {
   .jumbotron {
-    padding-top: calc(var(--jumbotron-padding-y) * 1.8);
+    padding-top: calc(var(--jumbotron-padding-y) * 2.2);
     padding-bottom: calc(var(--jumbotron-padding-y) * 2);
   }
 }
@@ -38,6 +38,7 @@
   background: #fff;
   padding:25px 20px 25px 20px !important;
   border-radius: 8px;
+  max-height: 100%;
 }
 
 footer {
@@ -245,4 +246,12 @@ a:hover {
   .btn-outline-success {
     margin-bottom: 20px !important;
   }
+}
+
+.page-load-status {
+  display: none; /* hidden by default */
+  padding-top: 20px;
+  border-top: 1px solid #DDD;
+  text-align: center;
+  color: #777;
 }
