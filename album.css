@@ -254,3 +254,27 @@ a:hover {
   text-align: center;
   color: #777;
 }
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  background:#F8F9FB;
+  border: none;
+  border-radius: 0px;
+}
+.dropdown-item {
+  font-family: 'Circular' !important;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 900 !important;
+  letter-spacing: 1.5px;
+  color: #808080;
+}
+
+a:visited,
+a:active,
+a:focus{
+  background-color: transparent !important;
+}
