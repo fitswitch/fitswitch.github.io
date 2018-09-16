@@ -15,8 +15,9 @@
   color: #d9534f !important;
 }
 
-#termsOfUse-error {
+span#termsOfUse-error.help-block {
     margin-left: 5px !important ;
+    color: #d9534f !important;
 }
 
 label {
