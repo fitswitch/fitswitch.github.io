@@ -33,7 +33,7 @@ $(document).ready(function () {
     }
 });
 
-	$("form").validate({
+	$("#signup-form").validate({
 		rules: {
       fname: {
 				required: true,

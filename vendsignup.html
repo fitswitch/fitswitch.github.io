@@ -22,6 +22,120 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
     <link href="https://fonts.googleapis.com/css?family=Overpass:700" rel="stylesheet">
+    <script>
+
+        $(document).ready(function () {
+	//override jquery validate plugin defaults
+	// http://stackoverflow.com/a/18754780
+
+	$.validator.setDefaults({
+    errorElement: "span",
+    errorClass: "help-block",
+    highlight: function (element, errorClass, validClass) {
+        // Only validation controls
+        if (!$(element).hasClass('novalidation')) {
+            $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+        }
+    },
+    unhighlight: function (element, errorClass, validClass) {
+        // Only validation controls
+        if (!$(element).hasClass('novalidation')) {
+            $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+        }
+    },
+    errorPlacement: function (error, element) {
+        if (element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+        }
+        else if (element.prop('type') === 'radio' && element.parent('.radio-inline').length) {
+            error.insertAfter(element.parent().parent());
+        }
+        else if (element.prop('type') === 'checkbox' || element.prop('type') === 'radio') {
+            error.appendTo(element.parent().parent());
+        }
+        else {
+            error.insertAfter(element);
+        }
+    }
+});
+
+	$("#signup-form").validate({
+		rules: {
+      fname: {
+				required: true,
+			},
+      lname: {
+				required: true,
+			},
+      country: {
+				required: true,
+			},
+			email: {
+				required: true,
+				maxlength: 255
+			},
+      plan: {
+				required: true,
+			},
+			emailConfirm: {
+				required: true,
+				equalTo: "#email",
+				maxlength: 255
+			},
+			zipCode: {
+        required: true,
+				maxlength: 32
+			},
+      username: {
+        required: true,
+				maxlength: 20
+			},
+      city: {
+        required: true,
+			},
+			password: {
+				required: true,
+				minlength: 8
+			},
+			passwordConfirm: {
+				required: true,
+				minlength: 8,
+				equalTo: "#password"
+			},
+			termsOfUse: "required"
+		},
+
+		messages: {
+      country: {
+				required: "Please select your country.",
+			},
+			email: {
+				required: "Please enter your email address.",
+			},
+      username: {
+				required: "Please choose a username.",
+			},
+			emailConfirm: {
+				required: "Confirm your email address.",
+				equalTo: "Emails do not match."
+			},
+			password: {
+				required: "Please choose a password."
+			},
+			passwordConfirm: {
+				required: "Confirm your password.",
+				equalTo: "Passwords do not match."
+			},
+      plan: {
+				required: "Please select a plan.",
+			},
+			termsOfUse: {
+				required: "<br>You must agree to terms of service."
+			}
+    }
+	});
+});
+    </script>
   </head>
 
   <body>
@@ -68,7 +182,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="col-sm-12 form-column">
-                            <form class="signup-form" action="https://formspree.io/foundifyinfo@gmail.com" method="POST">
+                            <form id="signup-form" class="signup-form" action="" method="POST">
                     <div class="form-row">
                     
                       <div class="col"><div class="form-group">
@@ -383,7 +497,7 @@
                         </div>
                     </div>
                 </div>
-        </div>
+        </div></div>
       </section>
 
     </main>
@@ -401,11 +515,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script
+    src="hhttps://code.jquery.com/jquery-2.2.4.min.js"></script>  
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
     <script src="../../../../assets/js/vendor/holder.min.js"></script>
-    <script src="index.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
   </body>
 </html>
