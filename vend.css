@@ -11,12 +11,12 @@
 	padding-bottom: 2em;
 }
 
-.has-error span, #plan-error, #termsOfUse-error{
+.has-error span, #plan-error, #termsOfUse-error {
   color: #d9534f !important;
 }
 
 #termsOfUse-error {
-    margin-left: 5px;
+    margin-left: 5px !important ;
 }
 
 label {
