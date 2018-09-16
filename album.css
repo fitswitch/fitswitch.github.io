@@ -29,7 +29,7 @@
 }
 
 .jumbotron-heading {
-  font-family: 'GT Walsheim Medium',sans-serif !important;
+  font-family: 'Circular', sans-serif !important;
 }
 
 .jumbotron .container {
@@ -141,13 +141,11 @@ h1 {
 }
 
 p, input, label {
-  font-family: 'Avenir' !important;
   font-size: 16px;
   font-weight: 400 !important;
 }
 
 p.lead {
-  font-family: 'Avenir' !important;
   font-weight: 400 !important;
   font-size: 18px !important;
   color: #363636 !important;
@@ -277,4 +275,8 @@ a:visited,
 a:active,
 a:focus{
   background-color: transparent !important;
+}
+
+* {
+  font-family: 'Circular', sans-serif !important;
 }

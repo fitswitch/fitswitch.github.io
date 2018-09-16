@@ -1,0 +1,32 @@
+* {
+  font-family: 'Circular', sans-serif;
+}
+
+.radio {
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+}
+
+.form-legend {
+	padding-bottom: 2em;
+}
+
+.has-error span, #plan-error{
+  color: #d9534f !important;
+}
+
+label {
+  font-weight: 800 !important;
+}
+
+.signup-form {
+    text-align: left;
+}
+
+.signup-form * {
+    font-size: 16px !important;
+}
+
+.signup-btn {
+    font-size: 14px !important;
+}
