@@ -59,7 +59,7 @@
     }
 });
 
-	$("#signup-form").validate({
+	$("#myForm").validate({
 		rules: {
       fname: {
 				required: true,
@@ -182,8 +182,9 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="col-sm-12 form-column">
-                            <form id="signup-form" class="signup-form" action="https://formcarry.com/s/CyEQEF8PeWM" method="POST">
-                    <div class="form-row">
+                            <form id="myform" class="gform" method="POST" data-email="foundifyinfo@gmail.com" action="https://script.google.com/macros/s/AKfycbwKQyN9sM8C2MSVBfQoQ2HLb-i6uajTXZO8elYtBw/exec">
+                                <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
+                                <div class="form-row">
                     
                       <div class="col"><div class="form-group">
                                     <label for="fname">First Name*</label>
