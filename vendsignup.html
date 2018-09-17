@@ -16,7 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="sell.css" rel="stylesheet" type="text/css">
-    <link href="vend.css" rel="stylesheet" type="text/css">
+    <link href="vend-page.css" rel="stylesheet" type="text/css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" ></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
@@ -185,13 +185,14 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center">
+      <section style="background: #332e28;" class="jumbotron text-center">
         <div class="container">
           <h1 style="font-weight: 500;" class="jumbotron-heading">Become a seller.</h1>
           <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="col-sm-12 form-column">
+                            <p style="opacity: 0.3;font-size: 14px;text-align: left;">*Required fields</p>
                             <form id="gform" action="https://www.enformed.io/ca6yayrb" method="POST">
                                 <div class="form-row">
                     
@@ -491,11 +492,11 @@
                                     <input type="text" id="username" name="username" class="form-control" placeholder="Maximum 20 characters">
                                 </div>
                     <div class="form-group">
-                                    <label for="password">Password</label>
+                                    <label for="password">Password*</label>
                                     <input type="password" id="password" name="password" class="form-control" placeholder="Minimum 8 characters">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password-confirm">Confirm Password</label>
+                                    <label for="password-confirm">Confirm Password*</label>
                                     <input type="password" id="password-confirm" name="passwordConfirm" class="form-control">
                                 </div>
                                 <div class="custom-control custom-checkbox">
