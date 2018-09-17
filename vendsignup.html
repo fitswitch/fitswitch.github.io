@@ -494,8 +494,10 @@
                                         <input type="checkbox" class="custom-control-input" id="termsOfUse" name="termsOfUse">
                                         <label class="custom-control-label" for="termsOfUse">Yes, I agree to terms of use.</label>
                                       </div><br>
-                                <button onClick="window.location.reload();" id="submit-form" type="submit" class="btn btn-primary signup-btn">Register</button>
+                                <input onclick="window.location='vendsignup-confirm.html';" id="submit-form" type="submit" value="Register" class="btn btn-primary signup-btn">
                             </form>
+                            <div style="display: none;" class="thankyou_message">Thank you for pledging!</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -525,5 +527,12 @@
     <script src="../../../../dist/js/bootstrap.min.js"></script>
     <script src="../../../../assets/js/vendor/holder.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+        function redirect() {
+  window.location.replace("sell.html");
+  return false;
+}
+        </script>
   </body>
 </html>
