@@ -141,20 +141,9 @@
 			},
 			termsOfUse: {
 				required: "You must agree to terms of use."
-			},
-    
-      submitHandler: function(form) {
-    $.ajax({
-      dataType: 'jsonp',
-      url: "https://formspree.io/foundifyinfo@gmail.com",
-          data: $("#gform").serialize()
-        }).done(function() {
-      //callback which can be used to show a thank you message
-      //and reset the form
-      window.location = "vendsignup-confirm.html";
-    });
-  }
+			},  
 },
+});
 });
     </script>
   </head>
