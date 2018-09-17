@@ -22,8 +22,16 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
     <link href="https://fonts.googleapis.com/css?family=Overpass:700" rel="stylesheet">
-    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
-
+   
+    <script>
+        $("#myform").validate({
+        submitHandler: function(form) {
+      window.location = "vendsignup-confirm.html";
+          form.submit();
+        }
+      });
+      </script>
+   
     <script>
 
         $(document).ready(function () {
@@ -61,7 +69,7 @@
     }
 });
 
-	$("#myform").validate({
+	$("#gform").validate({
 		rules: {
       fname: {
 				required: true,
@@ -133,9 +141,20 @@
 			},
 			termsOfUse: {
 				required: "You must agree to terms of use."
-			}
-    }
-	});
+			},
+    
+      submitHandler: function(form) {
+    $.ajax({
+      dataType: 'jsonp',
+      url: "https://formspree.io/foundifyinfo@gmail.com",
+          data: $("#gform").serialize()
+        }).done(function() {
+      //callback which can be used to show a thank you message
+      //and reset the form
+      window.location = "vendsignup-confirm.html";
+    });
+  }
+},
 });
     </script>
   </head>
@@ -184,7 +203,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="col-sm-12 form-column">
-                            <form onsubmit="window.location='vendsignup-confirm.html';" id="myform" class="gform" method="POST" data-email="foundifyinfo@gmail.com" action="https://script.google.com/macros/s/AKfycbwKQyN9sM8C2MSVBfQoQ2HLb-i6uajTXZO8elYtBw/exec">
+                            <form id="gform" action="https://formspree.io/foundifyinfo@gmail.com" method="POST">
                                 <div class="form-row">
                     
                       <div class="col"><div class="form-group">
@@ -206,12 +225,12 @@
                                 </div>
                     <label for="plan">Select a Pricing Plan*</label>
                     <div id="radio" class="radio"><div class="custom-control custom-radio">
-          <input type="radio" id="customRadio1" name="plan" class="custom-control-input">
-          <label class="custom-control-label" for="customRadio1">Novice <span style="font-weight: 300;">— $0 upfront, small commission fee, limited products.</span></label>
+          <input type="radio" id="Novice" name="plan" class="custom-control-input">
+          <label class="custom-control-label" for="Novice">Novice <span style="font-weight: 300;">— $0 upfront, small commission fee, limited products.</span></label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="customRadio2" name="plan" class="custom-control-input">
-          <label class="custom-control-label" for="customRadio2">Trainer <span style="font-weight: 300;">— $15 per month, no commission fee, unlimited products.</span></label></div>
+          <input type="radio" id="Trainer" name="plan" class="custom-control-input">
+          <label class="custom-control-label" for="Trainer">Trainer <span style="font-weight: 300;">— $15 per month, no commission fee, unlimited products.</span></label></div>
                     </div>
             <hr style="margin-top:25px; margin-bottom: 25px;">
                                 <div class="form-row"><div class="col"><div class="form-group">
