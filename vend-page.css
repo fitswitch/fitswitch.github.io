@@ -1,5 +1,4 @@
 body {
-    background-color: #332e28 !important;
     color: #ddd9d4;
 }
 
@@ -26,7 +25,7 @@ span#termsOfUse-error.help-block {
 }
 
 label {
-  font-weight: 800 !important;
+  font-weight: 500 !important;
 }
 
 #gform {
@@ -39,4 +38,8 @@ label {
 
 #submit-form {
     font-size: 14px !important;
+}
+
+input {
+    border: none !important;
 }
