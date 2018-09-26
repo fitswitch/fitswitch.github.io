@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
     <link href="https://fonts.googleapis.com/css?family=Overpass:700" rel="stylesheet">
+    <script src="search-overlay.js" ></script>
    
     <script>
         $("#myform").validate({
@@ -151,7 +152,12 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light box-shadow">
+        <div class="top-nav-bar">
+        <form style="position: absolute; right: 10px;" class="form-inline mt-2 mt-md-0">
+            <a href="login.html">Login</a> &nbsp;&nbsp;/&nbsp;&nbsp; <a href="register.html">Register</a>
+        </form>
+        </div>
+      <nav style="top: 30px;" class="navbar navbar-expand-md navbar-light fixed-top bg-light box-shadow">
         <a href="#"><img src="FitSwitch Logo.png" width="170" style="margin-right: 20px;"></a>
         <button style="border: none !important; outline: none !important;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -176,9 +182,9 @@
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <input id="search-expand" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+        </form>
         </div>
       </nav>
     </header>
@@ -193,7 +199,7 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="col-sm-12 form-column">
                             <p style="opacity: 0.3;font-size: 14px;text-align: left;">*Required fields</p>
-                            <form id="gform" action="https://www.enformed.io/ca6yayrb" method="POST">
+                            <form class="no-border" id="gform" action="https://www.enformed.io/ca6yayrb" method="POST">
                                 <div class="form-row">
                     
                       <div class="col"><div class="form-group">
@@ -222,7 +228,7 @@
           <input type="radio" id="Trainer" name="plan" class="custom-control-input" value="Trainer">
           <label class="custom-control-label" for="Trainer" name="Trainer">Trainer <span style="font-weight: 300;">— $15 per month, no commission fee, unlimited products.</span></label></div>
                     </div>
-            <hr style="margin-top:25px; margin-bottom: 25px;">
+            <hr style="border: 2px solid #fff;opacity: 0.2;margin-top:25px; margin-bottom: 25px;">
                                 <div class="form-row"><div class="col"><div class="form-group">
                                     <label for="city">City/Town*</label>
                                     <input type="text" id="zip-code" name="city" class="form-control">

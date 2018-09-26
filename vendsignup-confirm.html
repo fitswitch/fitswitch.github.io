@@ -23,12 +23,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
     <link href="https://fonts.googleapis.com/css?family=Overpass:700" rel="stylesheet">
     <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+    <script src="search-overlay.js" ></script>
   </head>
 
   <body>
+        <!-- Search Overlay -->
+        <div id="search">
+            <button type="button" class="close">×</button>
+            <form>
+                <input type="search" value="" placeholder="Type...">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+        <!-- End Search Overlay -->
 
     <header>
-      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light box-shadow">
+        <div class="top-nav-bar">
+        <form style="position: absolute; right: 10px;" class="form-inline mt-2 mt-md-0">
+            <a href="login.html">Login</a> &nbsp;&nbsp;/&nbsp;&nbsp; <a href="register.html">Register</a>
+        </form>
+        </div>
+      <nav style="top: 30px;" class="navbar navbar-expand-md navbar-light fixed-top bg-light box-shadow">
         <a href="#"><img src="FitSwitch Logo.png" width="170" style="margin-right: 20px;"></a>
         <button style="border: none !important; outline: none !important;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -53,9 +68,9 @@
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <input id="search-expand" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+        </form>
         </div>
       </nav>
     </header>
