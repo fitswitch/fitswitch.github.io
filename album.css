@@ -330,14 +330,14 @@ a:focus{
 }
 
 .top-nav-bar {
-  z-index: 9999;
+  z-index: 9999 !important;
   color: #fff;
   padding-top: 2px;
   padding-left: 20px;
   left: 0;
   height: 30px;
   width: 100% !important;
-  background: #332E28;
+  background: #332E28 !important;
   position: fixed;
   top: 0;
   text-align: right;
